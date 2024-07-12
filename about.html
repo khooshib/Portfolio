@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <script src="javascript.js" ></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(247, 247, 247, 0.952);
+            color: teal;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 20px;
+            background-color: rgb(28, 65, 65);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(159, 159, 235);
+            font-size: 1.04rem;
+        }
+
+        main {
+            flex: 1;
+            max-width: 80vw;
+            margin: auto;
+            padding: 40px 0;
+        }
+
+        .content {
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            background: #1b4a51;
+            color: rgb(241, 247, 247);
+            border: 2px solid rgb(5, 200, 203);
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: white;
+            color: #171736;
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: teal;
+            padding: 20px 0;
+        }
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        .footer div {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: lightgray;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: rgb(82, 15, 35);
+            margin-top: 20px;
+        }
+
+        footer h1 {
+            color: white;
+        }
+
+        .left {
+            color: white;
+        }
+
+        /*style*/
+
+        .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: left;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    position: absolute;
+    padding-right: 1rem;
+    color: white;
+}
+@media only screen and (max-width: 880px) {
+    .right {
+        display: none;
+    }
+
+    .secondnav {
+        display: block;
+    }
+.footer{
+   visibility: hidden;
+   padding: 0px;
+   margin-top: -17rem;
+
+}
+    .footer2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+       
+
+    }
+    .footer2>div {
+        width: auto;
+      
+
+    }
+    .footer-rights{
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 881px) {
+    .right {
+        display: block;
+    }
+
+    .secondnav {
+        display: none;
+    }
+    .footer{
+       visibility: visible;
+    }
+    .footer2{
+        display: none;
+    }
+    .footer-rights{
+        visibility: visible;
+    }
+}
+.footer-rights2{
+    text-align: center;
+    color: rgb(199, 180, 189);
+    padding: auto;
+}
+.footer2{
+    background-color: teal;
+    margin-top: -6rem;
+}
+.footer2 ul{
+    list-style: none;
+}
+.footer2 ul li a{
+    text-decoration: none;
+    color: white;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left"><a href="index.html" style="text-decoration: none; color: white;">Khooshi's Portfolio</a></div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="result.html">My Results</a></li>
+                    <li><a href="project.html">Projects</a></li>
+                    <li><a href="cv.html">Curriculum Vitae</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="secondnav">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="result.html">My results</a>
+                <a href="project.html">Projects</a>
+                <a href="cv.html">Curriculum Vitae</a>
+                <a href="contact.html">Contact Me</a>
+            </div>
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+            
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+        
+            <span class="openbtn" onclick="openNav()">&#9776;</span>
+        </div>
+    </header>
+    <main>
+        <div class="content">
+            <h1>About Me</h1>
+            <p>
+                Hello! My name is Khooshi Bhadiyadra. I am a versatile professional with a passion for technology and design.
+                With a solid background as a web developer, web designer, UI/UX designer, and Android app developer,
+                I bring a comprehensive set of skills to every project. I enjoy creating seamless and engaging user experiences,
+                whether it’s through building responsive websites, designing intuitive user interfaces, or developing mobile applications.
+                My goal is to blend creativity with technical expertise to deliver exceptional digital solutions.
+            </p>
+            <p>
+                I am currently studying at the Government Engineering College, Bhavnagar, in the Computer Engineering Department,
+                where I am in my 6th semester. My academic journey has further fueled my interest in web development, web designing,
+                and UI/UX designing, allowing me to explore and innovate within these fields.
+            </p>
+            <div class="buttons">
+                <a href="KhooshiBhadiyadraCV.pdf" class="btn">Download Resume</a>
+                <a href="https://www.linkedin.com/in/khooshi-b-87780b277/" class="btn">Visit LinkedIn</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer" >
+            <div>
+                <h1>Khooshi's Portfolio</h1>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="https://github.com/khooshib" class="link">Github</a></li>
+                    <li><a href="https://www.figma.com/files/recents-and-sharing/recently-viewed?fuid=1322229668320305985"
+                            class="link">Figma</a></li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/khooshi-b-87780b277/" class="href">LinkedIn</a></li>
+                    <li><a href="https://www.hackerrank.com/profile/ksbhadiyadra52" class="href">HackerRank</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-rights">
+            CopyRight &#169; khooshisportfolio.com | All Rights Reserved by Khooshi Bhadiyadra
+        </div>
+        <div class="footer2" style="margin-top: -7rem;">
+            <div class="footerfirst2">
+                <h1>Khooshi's Portfolio</h1>
+            </div>
+            <div class="footersecond2">
+                <ul>
+                    <li> <a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                    <li><a href="https://github.com/khooshib" class="href">Github</a></li>
+                    <li><a href="https://learn.microsoft.com/en-us/users/khooshibhadiyadra-1769/?source=docs"
+                            class="href">Microsoft Student Learn</a></li>
+                            <li><a href="https://www.linkedin.com/in/khooshi-b-87780b277/" class="href">Linkedin</a></li>
+                            <li><a href="https://www.hackerrank.com/profile/ksbhadiyadra52" class="href">HackerRank</a></li>
+                </ul>
+            </div>
+            <div class="footer-rights2">
+                CopyRight &#169; khooshisportfolio.com | All Rights Reserved by Khooshi Bhadiyadra
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
